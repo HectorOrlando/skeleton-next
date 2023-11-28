@@ -2,6 +2,7 @@
 
 import Head from 'next/head'
 import React, { FC, PropsWithChildren } from 'react'
+import Navbar from '../ui/Navbar';
 
 interface Props {
     title?: string;
@@ -16,7 +17,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({ children, title }) => {
                 <meta name='description' content={`Informanción sobre la página ${title}`} />
                 <meta name='keywords' content={`${title}, Next.js, TypeScript, Node.js`} />
             </Head>
-            {/* Navbar */}
+            <Navbar />
             <main>
                 {children}
             </main>

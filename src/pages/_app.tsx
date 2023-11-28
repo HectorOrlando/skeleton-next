@@ -8,7 +8,7 @@ import { themeDark, themeLight } from '../themes'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={themeDark}>
+    <ThemeProvider theme={themeLight}>
       <CssBaseline />
       <Component {...pageProps} />
     </ThemeProvider>
