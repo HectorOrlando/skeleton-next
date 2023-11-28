@@ -1,14 +1,68 @@
-# Skeleton-Frontend
+# Skeleton-Next
 
-Este proyecto es un Frontend desarrollado con Next.js y TypeScript.
 
-## Instalación
+Pasos para arrancar un proyecto clonado desde GitHub:
 
-Para instalar las dependencias, ejecuta el siguiente comando:
+1. **Clonar el repositorio:**
 
-```bash
-npm install
-```
+   ```bash
+   git@github.com:HectorOrlando/skeleton-next.git
+   ```
+
+   
+
+2. **Navegar al directorio del proyecto:**
+
+   ```bash
+   cd skeleton-next
+   ```
+
+3. **Instalar dependencias:**
+
+   ```bash
+   npm install
+   ```
+
+   Esto instalará todas las dependencias necesarias que están definidas en el archivo `package.json`.
+
+
+4. **Compilar el código TypeScript:**
+
+   ```bash
+   npm run build
+   ```
+
+   Esto compilará el código TypeScript y generará los archivos JavaScript en el directorio `dist/`.
+
+5. **Iniciar la aplicación:**
+
+   ```bash
+   npm start
+   ```
+
+   Esto arrancará la aplicación con Node.js, utilizando los archivos JavaScript generados en el paso anterior.
+
+   O, si prefieres utilizar nodemon en modo de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+   Esto arrancará la aplicación con nodemon, lo que reiniciará automáticamente la aplicación cuando detecte cambios en los archivos.
+
+6. **Acceder a la aplicación:**
+
+   Abre tu navegador y accede a la aplicación a través de la URL y el puerto configurados en tu archivo `.env` o en el código del servidor.
+
+7. **Probar la aplicación:**
+
+   Realiza pruebas en las rutas y funcionalidades de tu aplicación para asegurarte de que todo funcione como se espera.
+
+Estos pasos deberían proporcionarte una guía básica para arrancar un proyecto clonado. Asegúrate de revisar el archivo `package.json` del proyecto clonado para conocer cualquier configuración específica de scripts o dependencias. Además, ten en cuenta que estos pasos pueden variar ligeramente dependiendo de la configuración específica del proyecto.
+
+
+
+---
 
 ## Configuración
 
