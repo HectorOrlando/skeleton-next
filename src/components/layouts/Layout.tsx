@@ -18,7 +18,9 @@ export const Layout: FC<PropsWithChildren<Props>> = ({ children, title }) => {
                 <meta name='keywords' content={`${title}, Next.js, TypeScript, Node.js`} />
             </Head>
             <Navbar />
-            <main>
+            <main style={{
+                padding: '30px 20px 200px 20px'
+            }}>
                 {children}
             </main>
 

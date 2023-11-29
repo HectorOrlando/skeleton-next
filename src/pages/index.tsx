@@ -2,20 +2,19 @@
 
 import { useEffect, useState } from 'react';
 import { GetStaticProps, NextPage } from 'next'
-import { User, UsersListResponse } from '@/interfaces';
+import { UsersListResponse } from '@/interfaces';
 import { getUsers, gymApi } from './api';
 import { Layout } from '../components/layouts/Layout';
+import { UsersTable } from '@/components/users';
 
-interface Props {
-  usersData: User[]
-}
 
-const Home: NextPage<Props> = ({ usersData }) => {
-  const [users, setUsers] = useState(usersData);
+const Home: NextPage<UsersListResponse> = ({ users }) => {
+  const [usersData, setUsersData] = useState(users);
+
   const fetchUsers = async () => {
     try {
       const apiUsers = await getUsers();
-      setUsers(apiUsers);
+      setUsersData(apiUsers);
     } catch (error) {
       console.error('Error fetching users:', error);
     }
@@ -28,11 +27,8 @@ const Home: NextPage<Props> = ({ usersData }) => {
   return (
     <Layout title="Home">
       <h1>Welcome to the Gym!</h1>
-      <ul>
-        {users.map(({ _id, name, email }) => (
-          <li key={_id}>{`id: ${_id}  name: ${name}  email: ${email}`}</li>
-        ))}
-      </ul>
+      {/* Usa el componente de la tabla aquí */}
+      <UsersTable users={usersData} />
     </Layout>
   );
 };
@@ -41,7 +37,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data } = await gymApi.get<UsersListResponse>('/gym/users');
   return {
     props: {
-      usersData: data.users
+      users: data.users
     }
   }
 }
