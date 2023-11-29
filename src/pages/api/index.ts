@@ -1,1 +1,1 @@
-export {createUser, deleteUser, getUsers, updateUser} from './gymApi';
+export {createUser, deleteUser, getUsers, updateUser, gymApi} from './gymApi';

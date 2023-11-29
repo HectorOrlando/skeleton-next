@@ -1,12 +1,17 @@
 // src/pages/index.tsx
 
 import { useEffect, useState } from 'react';
+import { GetStaticProps, NextPage } from 'next'
+import { User, UsersListResponse } from '@/interfaces';
+import { getUsers, gymApi } from './api';
 import { Layout } from '../components/layouts/Layout';
-import { getUsers } from './api';
 
-const Home = () => {
-  const [users, setUsers] = useState([]);
+interface Props {
+  usersData: User[]
+}
 
+const Home: NextPage<Props> = ({ usersData }) => {
+  const [users, setUsers] = useState(usersData);
   const fetchUsers = async () => {
     try {
       const apiUsers = await getUsers();
@@ -15,7 +20,7 @@ const Home = () => {
       console.error('Error fetching users:', error);
     }
   };
-  
+
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -31,5 +36,14 @@ const Home = () => {
     </Layout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await gymApi.get<UsersListResponse>('/gym/users');
+  return {
+    props: {
+      usersData: data.users
+    }
+  }
+}
 
 export default Home;
