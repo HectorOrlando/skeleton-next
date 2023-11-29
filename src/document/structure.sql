@@ -1,0 +1,18 @@
+src
+    components
+        layouts
+            Layout.tsx
+        ui
+            Navbar.tsx
+    pages
+        _app.tsx
+        _document.tsx
+        index.tsx
+        pageone.tsx
+        pagetwo.tsx
+        pagethree.tsx
+    styles
+        global.css
+    themes
+        theme-dark.ts
+        theme-light.ts

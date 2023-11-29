@@ -18,10 +18,10 @@ import CottageIcon from '@mui/icons-material/Cottage';
 
 /*
     TODO: Hacer cambios en versión Mobile y PC. 
-    TODO: Cambiar texto de `Logo`, el Logo `CottageIcon`, y el array de const pages = ['Page-1', 'Page-2', 'Page-3', 'Upaje'];
+    TODO: Cambiar texto de `Logo`, el Logo `CottageIcon`, y el array de const pages = ['PageOne', 'PageTwo', 'PageThree', 'Upaje'];
 */
 
-const pages = ['Page-1', 'Page-2', 'Page-3', 'Upaje'];
+const pages = ['PageOne', 'PageTwo', 'PageThree', 'Upaje'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navbar = () => {
