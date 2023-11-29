@@ -90,6 +90,41 @@ src
 |       |-- Navbar.tsx
 ```
 
+### Connectar a una Api (Gym)
+
+Dentro del directorio `src/pages/api/gymApi.ts` con Axios hacemos la conexión con la api `axios.create` en el siguiente archivo hacemos un CRUD.
+
+
+# Estructura del Skeleton-Next
+```bash
+src
+|-- components
+|  |-- layouts
+|  | |-- Layout.tsx
+|  |-- ui
+|  | |-- Navbar.tsx
+|  |-- users
+|  | |-- UserTable.tsx
+|-- interfaces
+|  |-- user-list.ts
+|-- pages
+|  |-- api
+|  | |-- gymApi.ts
+|  |-- _app.tsx
+|  |-- _document.tsx
+|  |-- index.tsx
+|  |-- pageone.tsx
+|  |-- pagetwo.tsx
+|  |-- pagethree.tsx
+|-- styles
+|  |-- global.css
+|-- themes
+|  |-- theme-dark.ts
+|  |-- theme-light.ts
+
+
+```
+
 Recuerda que después de realizar cambios en la configuración, puedes reiniciar la aplicación con `npm start`.
 
 ¡Espero que disfrutes trabajando con Skeleton-Frontend! 😊

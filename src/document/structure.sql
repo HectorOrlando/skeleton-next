@@ -4,7 +4,14 @@ src
             Layout.tsx
         ui
             Navbar.tsx
+        users
+            UserTable.tsx
+    interfaces
+        user-list.ts
     pages
+        api
+            gymApi.ts
+            
         _app.tsx
         _document.tsx
         index.tsx
